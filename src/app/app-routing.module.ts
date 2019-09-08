@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainPageComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'main'
   }
 ];
 
