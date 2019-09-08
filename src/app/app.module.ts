@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {AppAuthModule} from './app-auth.module';
+import { MainPageComponent } from './component/page/main-page/main-page.component';
+import { ParticlesComponent } from './component/block/particles/particles.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainPageComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule,
