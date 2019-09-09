@@ -7,12 +7,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppAuthModule} from './app-auth.module';
 import { MainPageComponent } from './component/page/main-page/main-page.component';
 import { ParticlesComponent } from './component/block/particles/particles.component';
+import { DischargeComponent } from './component/block/discharge/discharge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    ParticlesComponent
+    ParticlesComponent,
+    DischargeComponent
   ],
   imports: [
     BrowserModule,
