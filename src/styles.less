@@ -1,1 +1,24 @@
 @import "~normalize.css";
+@import "global-styles/vars";
+
+* {
+  box-sizing: border-box;
+  &:before {
+    box-sizing: border-box;
+  }
+  &:after {
+    box-sizing: border-box;
+  }
+}
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Roboto Mono', monospace;
+  font-weight: normal;
+  background-color: @backgroundColor;
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}

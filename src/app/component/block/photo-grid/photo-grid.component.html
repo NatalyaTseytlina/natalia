@@ -1,0 +1,22 @@
+<ng-container *ngIf="(posts$ | async) as posts">
+
+  <div class="grid" data-aos="zoom-in">
+    <div class="item" data-aos="fade-up" *ngFor="let post of posts">
+      <img class="item__image" [src]="post.node.display_url" [alt]="post.node.accessibility_caption">
+      <div class="item__content">
+        <div class="item__location">{{ post.node.location.name }}</div>
+
+        <svg enable-background="new 0 0 48 48" height="48px" version="1.1" viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Expanded"><g><path d="M24,47.001c-0.173,0-0.346-0.045-0.501-0.135c-0.239-0.138-5.913-3.447-11.678-8.778C3.977,30.835,0,23.668,0,16.787    c0-9.275,6.279-13.5,12.113-13.5c4.499,0,9.53,2.572,11.887,8.229c2.357-5.657,7.389-8.229,11.887-8.229    C41.721,3.287,48,7.512,48,16.787c0,6.881-3.977,14.048-11.821,21.301c-5.765,5.331-11.439,8.641-11.678,8.778    C24.346,46.956,24.173,47.001,24,47.001z M12.113,5.287C7.242,5.287,2,8.886,2,16.787C2,30.65,20.674,42.783,24,44.833    c3.323-2.051,22-14.193,22-28.046c0-7.901-5.242-11.5-10.113-11.5c-4.473,0-9.58,3.062-10.905,9.903C24.891,15.66,24.479,16,24,16    s-0.891-0.34-0.982-0.81C21.693,8.35,16.586,5.287,12.113,5.287z"></path></g></g></svg>
+
+        <div class="item__like">{{ post.node.edge_liked_by.count }}</div>
+
+        <div class="item__comment">{{ post.node.edge_media_to_comment.count }}</div>
+
+        <svg height="1792" viewBox="0 0 1792 1792" width="1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 384q-204 0-381.5 69.5t-282 187.5-104.5 255q0 112 71.5 213.5t201.5 175.5l87 50-27 96q-24 91-70 172 152-63 275-171l43-38 57 6q69 8 130 8 204 0 381.5-69.5t282-187.5 104.5-255-104.5-255-282-187.5-381.5-69.5zm896 512q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22h-5q-15 0-27-10.5t-16-27.5v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220t-90.5-281q0-174 120-321.5t326-233 450-85.5 450 85.5 326 233 120 321.5z"></path></svg>
+
+        <div class="item__date">{{ post.node.taken_at_timestamp | date:'dd.MM.yyyy' }}</div>
+      </div>
+    </div>
+  </div>
+
+</ng-container>

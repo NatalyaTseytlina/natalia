@@ -48,7 +48,16 @@ export class InstagramService {
   public getProfileData(): Observable<any> {
     return this.getPage(environment.instagramAccountName)
       .pipe(map(pageData => {
-        return pageData.entry_data.ProfilePage[0].graphql.user;
+        const userData = pageData.entry_data.ProfilePage[0].graphql.user;
+        userData.edge_owner_to_timeline_media.edges.map(post => {
+          const date = new Date();
+          date.setTime(post.node.taken_at_timestamp * 1000);
+          post.node.taken_at_timestamp = date;
+
+          return post;
+        });
+
+        return userData;
       }));
   }
 

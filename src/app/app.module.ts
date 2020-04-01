@@ -8,13 +8,17 @@ import {AppAuthModule} from './app-auth.module';
 import { MainPageComponent } from './component/page/main-page/main-page.component';
 import { ParticlesComponent } from './component/block/particles/particles.component';
 import { DischargeComponent } from './component/block/discharge/discharge.component';
+import { PhotoGridComponent } from './component/block/photo-grid/photo-grid.component';
+import { NameComponent } from './component/block/name/name.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     ParticlesComponent,
-    DischargeComponent
+    DischargeComponent,
+    PhotoGridComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule,

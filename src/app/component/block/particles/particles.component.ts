@@ -15,13 +15,13 @@ export class ParticlesComponent implements OnInit {
   particles: Particle[];
 
   properties = {
-    bgColor             : 'rgba(17, 17, 19, 1)',
-    particleColor       : 'rgba(255, 40, 40, 1)',
+    bgColor             : 'rgba(28, 33, 40, 0.95)',
+    particleColor       : 'rgba(255, 255, 255, 0.8)',
     particleRadius      : 3,
     particleCount       : 60,
     particleMaxVelocity : 0.5,
     lineLength          : 150,
-    particleMaxLife        : 6,
+    particleMaxLife     : 6,
   };
 
   constructor() { }
